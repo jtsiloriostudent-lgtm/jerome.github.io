@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ship Cargo Calculator</title>
+</head>
+<body>
+
+   
+    <nav>
+        <a href="index.html">Ship Cargo Calculator</a> | 
+        <a href="grade-calculator.html"> Grade Calculator</a>
+    </nav>
+    <hr>
+
+    <h1>Ship Cargo Calculator</h1>
+
+    <form id="cargoForm" onsubmit="return false;">
+        <div>
+            <label for="shipType">Ship Type:</label>
+            <select id="shipType">
+                <option value="scout">Scout</option>
+                <option value="freighter">Freighter</option>
+                <option value="cruiser">Cruiser</option>
+                <option value="yacht">Yacht / Other</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="cargoWeight">Cargo Weight (tons):</label>
+            <input type="number" id="cargoWeight" value="0">
+        </div>
+        <br>
+        <div>
+            <label for="isVIP">
+                <input type="checkbox" id="isVIP"> VIP Status
+            </label>
+        </div>
+        <br>
+        <div>
+            <label for="hasContraband">
+                <input type="checkbox" id="hasContraband"> Carrying Contraband
+            </label>
+        </div>
+        <br>
+        <button type="button" onclick="processDockingFee()">Calculate Docking Fee</button>
+    </form>
+
+    <h2>Docking Fee Result: <span id="dockingFeeOutput">-</span></h2>
+
+    <script src="ship-calculator.js"></script>
+</body>
+</html>
